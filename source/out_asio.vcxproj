@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{09E47AA3-CFE8-4207-83C0-B6843EF2D22B}</ProjectGuid>
+    <RootNamespace>out_asio</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25420.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\Applications\Development\ASIOSDK2.3\host\pc;D:\Applications\Development\ASIOSDK2.3\host;D:\Applications\Development\ASIOSDK2.3\common;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>fp10.obj;ComCtl32.Lib;Uxtheme.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)out_asio(dll).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)out_asio.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32_WINNT=0x0501;WINVER=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+      <CallingConvention>Cdecl</CallingConvention>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>fp10.obj;ComCtl32.Lib;Uxtheme.lib;WinMM.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)out_asio(dll).dll</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SetChecksum>true</SetChecksum>
+      <TurnOffAssemblyGeneration>true</TurnOffAssemblyGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Applications\Development\ASIOSDK2.3\common\asio.cpp" />
+    <ClCompile Include="..\..\..\Applications\Development\ASIOSDK2.3\host\asiodrivers.cpp" />
+    <ClCompile Include="..\..\..\Applications\Development\ASIOSDK2.3\host\pc\asiolist.cpp" />
+    <ClCompile Include="CommonFunc.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="out_asio.cpp" />
+    <ClCompile Include="pcmasio.cpp" />
+    <ClCompile Include="ssrc\dbesi0.cpp" />
+    <ClCompile Include="ssrc\fftsg_fl.cpp" />
+    <ClCompile Include="ssrc\ssrc.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="ToBuff_LSB.cpp" />
+    <ClCompile Include="ToBuff_MSB.cpp" />
+    <ClCompile Include="WaitForObject.cpp" />
+    <ClCompile Include="WSL\Button.cpp" />
+    <ClCompile Include="WSL\ComboBox.cpp" />
+    <ClCompile Include="WSL\Control.cpp" />
+    <ClCompile Include="WSL\Dialog.cpp" />
+    <ClCompile Include="WSL\UpDown.cpp" />
+    <ClCompile Include="WSL\Window.cpp" />
+    <ClCompile Include="WSL\WSL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Applications\Development\ASIOSDK2.3\common\asio.h" />
+    <ClInclude Include="..\..\..\Applications\Development\ASIOSDK2.3\common\asiosys.h" />
+    <ClInclude Include="..\..\..\Applications\Development\ASIOSDK2.3\common\combase.h" />
+    <ClInclude Include="..\..\..\Applications\Development\ASIOSDK2.3\common\iasiodrv.h" />
+    <ClInclude Include="..\..\..\Applications\Development\ASIOSDK2.3\host\asiodrivers.h" />
+    <ClInclude Include="..\..\..\Applications\Development\ASIOSDK2.3\host\ginclude.h" />
+    <ClInclude Include="..\..\..\Applications\Development\ASIOSDK2.3\host\pc\asiolist.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="CommonFunc.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="OUT.H" />
+    <ClInclude Include="out_asio.h" />
+    <ClInclude Include="pcmasio.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ssrc\ssrc.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="ToBuff_LSB.h" />
+    <ClInclude Include="ToBuff_MSB.h" />
+    <ClInclude Include="WaitForObject.h" />
+    <ClInclude Include="wa_ipc.h" />
+    <ClInclude Include="WSL\Button.h" />
+    <ClInclude Include="WSL\ComboBox.h" />
+    <ClInclude Include="WSL\Control.h" />
+    <ClInclude Include="WSL\Dialog.h" />
+    <ClInclude Include="Wsl\StdProc.h" />
+    <ClInclude Include="WSL\UpDown.h" />
+    <ClInclude Include="WSL\Window.h" />
+    <ClInclude Include="WSL\WSL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="out_asio.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
